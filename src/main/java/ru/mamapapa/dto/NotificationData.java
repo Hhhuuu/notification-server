@@ -1,12 +1,14 @@
 package ru.mamapapa.dto;
 
+import java.util.List;
+
 /**
  * @author Popov Maxim <m_amapapa@mail.ru>
  */
 public class NotificationData {
     private String header;
     private String body;
-    private String userId;
+    private List<String> userIds;
 
     public void setHeader(String header) {
         this.header = header;
@@ -16,8 +18,8 @@ public class NotificationData {
         this.body = body;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUserIds(List<String> userIds) {
+        this.userIds = userIds;
     }
 
     public String getHeader() {
@@ -28,8 +30,8 @@ public class NotificationData {
         return body;
     }
 
-    public String getUserId() {
-        return userId;
+    public List<String> getUserIds() {
+        return userIds;
     }
 
     @Override
@@ -37,7 +39,7 @@ public class NotificationData {
         return "{" +
               "header: " + header + " " +
               "body: " + body + " " +
-              "userId: " + userId + " " +
+              "userId: " + userIds + " " +
               '}';
     }
 }
